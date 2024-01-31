@@ -11,7 +11,11 @@ root.render(
   <Auth0Provider
     domain="dev-aynpp75r5ohgzmpr.us.auth0.com"
     clientId="qEHNh8JWpm9IKuKlcZ4NThaZnUvPxEWl"
-    authorizationParams={{ redirect_uri: window.location.origin }}
+    authorizationParams={{
+      redirect_uri: window.location.origin,
+      audience: "http://localhost:8080",
+      scope: "read:books",
+    }}
   >
     <BrowserRouter>
       <App />

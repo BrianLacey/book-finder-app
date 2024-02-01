@@ -14,7 +14,6 @@ root.render(
     authorizationParams={{
       redirect_uri: window.location.origin,
       audience: "http://localhost:8080",
-      scope: "read:books",
     }}
   >
     <BrowserRouter>

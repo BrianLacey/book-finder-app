@@ -1,7 +1,5 @@
 import axios from "axios";
 
-// const headers = {};
-
 export const readAllBooks = async (token) => {
   const config = {
     method: "GET",

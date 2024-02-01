@@ -5,8 +5,7 @@ import LogoutButton from "./logoutButton.tsx";
 const Navbar: FunctionComponent = () => {
   return (
     <nav>
-      <Link to="/">Home</Link>
-      <Link to="favorites">Favorites</Link>
+      <Link to="/">Favorites</Link>
       <Link to="search">Search</Link>
       <LogoutButton />
     </nav>

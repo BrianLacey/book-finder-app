@@ -16,7 +16,7 @@ const Favorites: FunctionComponent = ({ setBookList, setFavoritesList }) => {
 
   return (
     <>
-      "I am the Favorites page."
+      <h1 className='flex justify-center text-7xl font-bold'>Favorites</h1>
       {favoritesList.length > 0 && renderFavorites}
     </>
   );

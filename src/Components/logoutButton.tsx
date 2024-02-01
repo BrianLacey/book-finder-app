@@ -7,6 +7,7 @@ const LogoutButton: FunctionComponent = () => {
   return (
     <button
       type="button"
+      className="p-3"
       onClick={() =>
         logout({ logoutParams: { returnTo: window.location.origin } })
       }

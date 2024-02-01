@@ -7,20 +7,21 @@ const SearchBar: FunctionComponent = ({
   clearSearchValue,
 }) => {
   return (
-    <>
+    <div className="flex py-5">
       <input
         type="text"
+        className="flex px-3"
         placeholder="Search..."
         onChange={updateSearchValue}
         value={searchValue}
       />
-      <button type="button" onClick={filterBySearch}>
+      <button type="button" className="flex px-3" onClick={filterBySearch}>
         Submit
       </button>
-      <button type="button" onClick={clearSearchValue}>
+      <button type="button" className="flex px-3" onClick={clearSearchValue}>
         Clear
       </button>
-    </>
+    </div>
   );
 };
 

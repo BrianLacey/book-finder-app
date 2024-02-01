@@ -49,7 +49,6 @@ const Search: FunctionComponent = ({ setFavoritesList }) => {
 
   return (
     <>
-      "I am the Search page."
       <SearchBar
         searchValue={searchValue}
         updateSearchValue={updateSearchValue}

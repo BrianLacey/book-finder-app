@@ -1,7 +1,11 @@
 import React, { FunctionComponent } from "react";
 
-const FavoriteButton = () => {
-    return <button type='button'>Add to Favorites</button>
-}
+const FavoriteButton = ({ handleClick, text }) => {
+  return (
+    <button type="button" onClick={handleClick}>
+      {text}
+    </button>
+  );
+};
 
 export default FavoriteButton;

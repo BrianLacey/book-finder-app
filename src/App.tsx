@@ -66,7 +66,6 @@ const App: FunctionComponent = () => {
               path="/"
               element={
                 <Favorites
-                  setBookList={setBookList}
                   setFavoritesList={setFavoritesList}
                 />
               }

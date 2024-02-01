@@ -1,8 +1,4 @@
-import React, {
-  FunctionComponent,
-  useState,
-  useEffect,
-} from "react";
+import React, { FunctionComponent, useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import { GlobalContext } from "./Helpers/contexts.ts";
@@ -57,29 +53,31 @@ const App: FunctionComponent = () => {
   return (
     <>
       <Navbar />
-      <GlobalContext.Provider
-        value={{
-          favoritesList,
-          bookList,
-          accessToken,
-        }}
-      >
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Favorites
-                setBookList={setBookList}
-                setFavoritesList={setFavoritesList}
-              />
-            }
-          />
-          <Route
-            path="search"
-            element={<Search setFavoritesList={setFavoritesList} />}
-          />
-        </Routes>
-      </GlobalContext.Provider>
+      <div className="mt-20 p-6 min-w-full min-h-full flex-grow bg-orange-100 text-orange-800">
+        <GlobalContext.Provider
+          value={{
+            favoritesList,
+            bookList,
+            accessToken,
+          }}
+        >
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Favorites
+                  setBookList={setBookList}
+                  setFavoritesList={setFavoritesList}
+                />
+              }
+            />
+            <Route
+              path="search"
+              element={<Search setFavoritesList={setFavoritesList} />}
+            />
+          </Routes>
+        </GlobalContext.Provider>
+      </div>
     </>
   );
 };

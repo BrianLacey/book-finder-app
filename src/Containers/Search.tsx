@@ -38,24 +38,27 @@ const Search: FunctionComponent = ({ setFavoritesList }) => {
     let toRender = filteredList.length < 1 ? bookList : filteredList;
     return toRender.map((current) => {
       return (
-        <>
+        <div className="flex flex-col flex-grow flex-shrink basis-96 place-items-center">
           <p>{current.title}</p>
           <p>{current.authors}</p>
           <img src={current.image_url} alt={current.title} />
-        </>
+        </div>
       );
     });
   };
 
   return (
     <>
+    <h1 className='flex justify-center text-7xl font-bold'>Search</h1>
       <SearchBar
         searchValue={searchValue}
         updateSearchValue={updateSearchValue}
         filterBySearch={filterBySearch}
         clearSearchValue={clearSearchValue}
       />
-      {bookList.length > 0 && renderBooks()}
+      <div className="flex flex-wrap">
+        {bookList.length > 0 && renderBooks()}
+      </div>
     </>
   );
 };

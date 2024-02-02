@@ -61,7 +61,7 @@ const App: FunctionComponent<{
   return (
     <>
       <Navbar />
-      <div className="mt-20 p-6 min-w-full min-h-full flex-grow bg-orange-100 text-orange-800">
+      <div className="pt-24 p-6 text-orange-800">
         <GlobalContext.Provider
           value={{
             favoritesList,

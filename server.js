@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const { auth } = require("express-oauth2-jwt-bearer");
-const router = require("./Routes/routes");
+const router = require("./APIs/Routes/routes");
 
 const PORT = process.env.PORT || 8080;
 

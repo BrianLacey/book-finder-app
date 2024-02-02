@@ -1,12 +1,15 @@
-import React, { FunctionComponent, useEffect, useContext } from "react";
+import React, { FunctionComponent, useContext } from "react";
 import { GlobalContext } from "../Helpers/contexts.ts";
 import BookCard from "../Components/bookCard.tsx";
 import { removeFromFavorites } from "../Helpers/favoritesHandlers.ts";
+import { IfavoritesList } from "../Helpers/interfaces.ts";
 
-const Favorites: FunctionComponent = ({ setFavoritesList }) => {
+const Favorites: FunctionComponent<{
+  setFavoritesList: React.Dispatch<React.SetStateAction<IfavoritesList[]>>;
+}> = ({ setFavoritesList }) => {
   const { favoritesList } = useContext(GlobalContext);
 
-  const renderFavorites = favoritesList.map((item) => {
+  const renderFavorites: React.JSX.Element[] = favoritesList.map((item) => {
     return (
       <div
         className="flex flex-col flex-grow flex-shrink basis-96 pb-10 place-items-center"

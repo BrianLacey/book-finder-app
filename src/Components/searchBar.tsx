@@ -1,11 +1,11 @@
 import React, { FunctionComponent } from "react";
 
-const SearchBar: FunctionComponent = ({
-  searchValue,
-  updateSearchValue,
-  filterBySearch,
-  clearSearchValue,
-}) => {
+const SearchBar: FunctionComponent<{
+  searchValue: string;
+  updateSearchValue: (e) => void;
+  filterBySearch: (e) => void;
+  clearSearchValue: () => void;
+}> = ({ searchValue, updateSearchValue, filterBySearch, clearSearchValue }) => {
   return (
     <div className="flex py-5">
       <input

@@ -6,11 +6,14 @@ import {
   addToFavorites,
   removeFromFavorites,
 } from "../Helpers/favoritesHandlers.ts";
+import { IbookList, IfavoritesList } from "../Helpers/interfaces.ts";
 
-const Search: FunctionComponent = ({ setFavoritesList }) => {
+const Search: FunctionComponent<{
+  setFavoritesList: React.Dispatch<React.SetStateAction<IfavoritesList[]>>;
+}> = ({ setFavoritesList }) => {
   const { bookList, favoritesList } = useContext(GlobalContext);
-  const [searchValue, setSearchValue] = useState("");
-  const [filteredList, setFilteredList] = useState([]);
+  const [searchValue, setSearchValue] = useState<string>("");
+  const [filteredList, setFilteredList] = useState<IbookList[]>([]);
 
   const updateSearchValue = (e) => {
     e.preventDefault();
